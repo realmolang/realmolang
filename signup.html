@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+<script>
+  function check() {
+    let text = "";
+
+    const form = document.querySelector('form');
+
+    text += "아이디 : " + form.username.value + "\n";
+    text += "비밀번호 : " + form.password.value + "\n";
+    text += "이메일 : " + form.email.value + "\n";
+    text += "생년월일 : " + form.birth.value + "\n";
+    text += "성별 : " + form.gender.value + "\n";
+
+    // 체크박스(관심사)는 여러 개 선택 가능하므로 처리
+    const interests = [];
+    form.querySelectorAll('input[name="interest"]:checked').forEach(el => {
+      interests.push(el.value);
+    });
+    text += "관심사 : " + (interests.length ? interests.join(", ") : "없음") + "\n";
+
+    // 라디오 버튼 (가입 경로)
+    const source = form.querySelector('input[name="source"]:checked');
+    text += "가입 경로 : " + (source ? source.value : "선택 안함") + "\n";
+
+    alert(text);
+  }
+</script>
+    <style> 
+/* 전체 페이지 기본 스타일 */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* 헤더 영역 */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 콘텐츠 섹션 */
+section {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* 이미지 스타일 */
+img {
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* 표 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+}
+
+/* 리스트 스타일 */
+ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+/* 링크 스타일 */
+a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 폼 요소 스타일 */
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 30px auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* 반응형 처리 */
+@media (max-width: 600px) {
+  section, form {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+    </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="page-title">회원가입 양식 </h1>
+  <form action="submit.html" method="post" onsubmit="event.preventDefault(); check();">
+    <label for="username">아이디:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">비밀번호:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="email">이메일:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="birth">생년월일:</label><br>
+    <input type="date" id="birth" name="birth"><br><br>
+
+    <label for="gender">성별:</label><br>
+    <select id="gender" name="gender">
+      <option value="male">남성</option>
+      <option value="female">여성</option>
+      <option value="other">기타</option>
+    </select><br><br>
+
+    <label>관심사:</label><br>
+    <input type="checkbox" id="interest-coding" name="interest" value="coding"> <label for="interest-coding">코딩</label><br>
+    <input type="checkbox" id="interest-reading" name="interest" value="reading"> <label for="interest-reading">독서</label><br>
+    <input type="checkbox" id="interest-sports" name="interest" value="sports"> <label for="interest-sports">스포츠</label><br>
+    <input type="checkbox" id="interest-other" name="interest" value="other"> <label for="interest-other">기타</label><br><br>
+
+    <label>가입:</label><br>
+    <input type="radio" id="source-friend" name="source" value="friend"> <label for="source-friend">친구 추천</label><br>
+    <input type="radio" id="source-ad" name="source" value="ad"> <label for="source-ad">웹페이지 광고</label><br>
+    <input type="radio" id="source-search" name="source" value="search"> <label for="source-search">검색</label><br><br>
+
+    <input type="submit" value="가입하기">
+  </form>
+</body>
+</html>
