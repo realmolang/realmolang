@@ -1,149 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="utf-8">
-<title>강성주 : 자기소개</title>
-<style> /* CSS 스타일 시트 작성, 4-9 소스 */
- body {background-color : rgb(199, 215, 230); }
- h3 {color : purple;}
- hr { border : 2px solid yellowgreen;}
- span { color : blue; font-size : 10px;}
-
- h3, li { /*태그 이름 셀렉터*/
-    color : brown;}
-
-    h3 { 
-	text-align : left; /* 오른쪽 정렬 */
-}
-span { 
-	text-decoration : line-through; /* 중간 줄 */
-}  
-strong { 
-	text-decoration : overline; /* 윗줄 */
-}
-.p1 { 
-	text-indent : 3em; /* 3 글자 들여쓰기 */
-	text-align : justify; /* 양쪽 정렬 */
-} 
-.p2 {
-	text-indent : 1em; /* 1 글자 들여쓰기 */ 
-	text-align : center; /* 중앙 정렬 */
-}     
-
-body {
-    font-family : "Times New Roman", Serif;
-    font-size : large;
-}
-h3 {
-    font : italic bold 20px consolas, sans-serif;
-}
-
-div { /* 5-1 소스 */
-	border : 2px solid yellowgreen;
-	color : blue;
-	background : aliceblue;
-}
-span {
-	border : 3px dotted red;
-	background : yellow;
-}
-div { /* 5-2 소스 */
-	display : inline-block;
- 	height : 50px;
- 	width : 50px;
- 	border : 1px solid lightgray;
-	text-align : center;
-	color : white;	
- 	background : red;	
-}
-#down:hover {
-    position : relative;
-    left : 20px;
-    top : 20px;    
-   	background : green;
-}
-#up:hover {
-    position : relative;
-    right : 20px;
-    bottom : 20px;
-   	background : green;
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <title>메인페이지</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f0f8ff;
+    }
+    h1 {
+      margin-bottom: 40px;
+      color: #333;
+      text-shadow: 1px 1px 2px #aaa;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      color: white;
+      background-color: #FF7210;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .btn:hover {
+      background-color: #FF7210;
+    }
+    .character {
+      margin-top: 50px;
+    }
+    .character img {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+      border-radius: 20px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+      background-color: white;
+    }
+    .character p {
+      font-size: 20px;
+      font-weight: bold;
+      color: #444;
+      margin-top: 15px;
+      text-shadow: 1px 1px 1px #eee;
+    }
+  </style>
 </head>
 <body>
-<h3> 회원 정보를 입력해주세요</h3>
-    <h3> 내 소개를 간단히 해보겠어요</h3>
-    <hr>
-    <form>
-        email : <input type="email" placeholder="id@host"><br>
-        홈페이지 : <input type="url" placeholder="http://"><br>
-        전화번호 : <input type="tel" placeholder="010000000"> <br>
-                    <input type="submit" value="확인"><br><br>
-    <hr>
-     검색어 : <input type="search" placeholder="검색어">
-             <input type="botton" value="검색">  
-    </form>
-    <p style="color:green"> 홈페이지가 엉망으로 보여도
-  <em style="font-size:25px">그냥 가만히</em>보세요
 
-    </p>
-<h3>안녕하세요 미래인재학부 강성주 입니다</h3>
-<hr>
-<p> 제 사진입니다.</p>
-<img src="kang.jpg" width="150" height="200"
-	 	 alt="kang">
-<hr>
-<h3>간단한 소개</h3>
-   <ol type="I" >
-    <li>좋아하는 음식 : 고기류
-        <ul>
-            <li> 소고기
-            <li> 돼지고기
-            <li> 닭고기
-            <li> 등등
-        </ul>
-    </li>
-    <li>취미 : 영화보기</li>
-    <ul>
-        <li> (2024) 파묘
-        <li> (2024) 범죄도시4
-        <li> (2024) 행복의나라
-        <li> (2024) 조커2
-        <li> (2024) 글레디에디터2
-        <li> (2025) 미키17
-        <li> (2025) 첫번째키스
-        <li> (2025) 승부
-        <li> (2025) 로비
-        <li> (2025) 야당  
-        </ul>       
-    <li>학교 및 학과 : 한성대학교 미래플러스대학 미래인재학부</li>
-    <li>학번 : 2506020</li>
-    </ol>
+  <h1>환영합니다! 메인페이지입니다.</h1>
 
-   <hr>
+  <a href="signup.html" class="btn">회원가입</a>
+  <a href="about.html" class="btn">자기소개</a>
 
-<h3> 제가 다니고 있는 한성대학교의 마크 입니다.</h3>
-<img src="https://www.hansung.ac.kr/sites/hansung/images/common/NEW_Logo_2.png" width="150" height="30"
-	 	 alt="hansung u">
-    
-<h3>소스 5-1</h3> 
-<hr>
-나는 <div style="display:none">
-    몰랑이</div> 입니다. <br><br>
-나는 <div style="display:inline">
-    도구리</div> 입니다. <br><br>
-나는 <div style="display:inline-block; heigth:50px">
-    몰랑</div> 입니다. <br><br>    
+  <div class="character">
+    <img src="molang_main.png" alt="몰랑이 캐릭터" />
+    <p>귀여운 몰랑이가 여러분을 기다리고 있답니다!</p>
+  </div>
 
-    <h3> 상대 배치, relative</h3>
-    h와 k 글자에 마우스를 올려 보세요
-    <hr>
-    <div id="up">T</div>
-    <div id="down">h</div>
-    <div id="up">a</div>
-    <div id="down">n  </div>
-    <div id="up">k</div>
-    <div id="down">s</div>
 </body>
 </html>
