@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <title>메인페이지</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background: #f0f8ff;
-    }
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background: #f0f8ff;
+    padding-bottom: 100px; 
+}
     h1 {
       margin-bottom: 40px;
       color: #333;
@@ -28,11 +29,13 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .btn:hover {
-      background-color: #FF7210;
+      background-color: #E65C00;
     }
-    .character {
-      margin-top: 50px;
-    }
+
+ .character {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
     .character img {
       width: 300px;
       height: 300px;
@@ -48,19 +51,72 @@
       margin-top: 15px;
       text-shadow: 1px 1px 1px #eee;
     }
+
+.ads-container {
+    position: relative;
+    width: 90%; 
+    max-width: 800px; 
+    background: rgba(0, 115, 207, 0.9);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 10px; 
+    margin: 50px auto; 
+}
+
+.ads-container .btn {
+    background: linear-gradient(45deg, #FFC107, #FFA000); 
+    color: #333;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ads-container .btn:hover {
+    background: linear-gradient(45deg, #FF9800, #FF7200); 
+    transform: scale(1.08);
+}
+
+
+.ads-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+.ads-desc {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+    opacity: 0.85;
+    font-style: italic; 
+}
   </style>
 </head>
 <body>
 
   <h1>환영합니다!</h1>
-
   <a href="signup.html" class="btn">회원가입</a>
   <a href="about.html" class="btn">자기소개</a>
 
   <div class="character">
     <img src="molang_main.jpg" alt="몰랑이 캐릭터" />
     <p>귀여운 몰랑이가 여러분을 기다리고 있답니다!</p>
-  </div>
+</div>
 
+<div class="ads-container">
+    <p class="ads-title">학교와 회사 홍보</p>
+    <a href="https://futureplus.hansung.ac.kr/ko/department/future" class="btn">한성대학교 미래인재학부</a>
+    <p class="ads-desc">미래를 위한 혁신적인 교육을 제공하는 대학입니다.</p>
+    <a href="https://www.kpmtech.co.kr/kr/index.php" class="btn">케이피엠테크</a>
+    <p class="ads-desc">첨단 표면처리 기술을 선도하는 회사입니다.</p>
+</div>
+  
 </body>
 </html>
