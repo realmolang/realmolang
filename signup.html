@@ -16,14 +16,14 @@
     text += "생년월일 : " + form.birth.value + "\n";
     text += "성별 : " + form.gender.value + "\n";
 
-    // 체크박스(관심사)는 여러 개 선택 가능하므로 처리
+    
     const interests = [];
     form.querySelectorAll('input[name="interest"]:checked').forEach(el => {
       interests.push(el.value);
     });
     text += "관심사 : " + (interests.length ? interests.join(", ") : "없음") + "\n";
 
-    // 라디오 버튼 (가입 경로)
+    
     const source = form.querySelector('input[name="source"]:checked');
     text += "가입 경로 : " + (source ? source.value : "선택 안함") + "\n";
 
@@ -31,7 +31,8 @@
   }
 </script>
     <style> 
-/* 전체 페이지 기본 스타일 */
+
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -40,7 +41,7 @@ body {
   color: #333;
 }
 
-/* 헤더 영역 */
+
 header {
   background-color: #4CAF50;
   color: white;
@@ -49,7 +50,7 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* 콘텐츠 섹션 */
+
 section {
   padding: 30px;
   max-width: 800px;
@@ -59,14 +60,13 @@ section {
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* 이미지 스타일 */
+
 img {
   border-radius: 50%;
   display: block;
   margin-bottom: 20px;
 }
 
-/* 표 스타일 */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -87,13 +87,12 @@ td {
   padding: 10px;
 }
 
-/* 리스트 스타일 */
+
 ul {
   list-style-type: square;
   margin-left: 20px;
 }
 
-/* 링크 스타일 */
 a {
   text-decoration: none;
   color: #4CAF50;
@@ -104,7 +103,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 폼 요소 스타일 */
 form {
   background-color: #ffffff;
   padding: 30px;
@@ -133,21 +131,24 @@ input[type="radio"] {
   margin-right: 8px;
 }
 
+
 input[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #0073CF;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+  display: block;
+  margin: auto;
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #FF7210;
 }
 
-/* 반응형 처리 */
+
 @media (max-width: 600px) {
   section, form {
     padding: 20px;
@@ -169,7 +170,7 @@ input[type="submit"]:hover {
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="page-title">회원가입 양식 </h1>
+  <h1 class="page-title">회원가입 입력화면 </h1>
   <form action="submit.html" method="post" onsubmit="event.preventDefault(); check();">
     <label for="username">아이디:</label><br>
     <input type="text" id="username" name="username" required><br><br>
