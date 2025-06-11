@@ -10,33 +10,38 @@ body {
     padding: 50px;
     background: #f0f8ff;
     padding-bottom: 100px; 
+    min-height: 100vh;
 }
     h1 {
       margin-bottom: 40px;
       color: #333;
       text-shadow: 1px 1px 2px #aaa;
     }
-    .btn {
-      display: inline-block;
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 18px;
-      text-decoration: none;
-      color: white;
-      background-color: #FF7210;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .btn:hover {
-      background-color: #E65C00;
-    }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #0073CF, #FF7210);
+            color: #FFFFF0;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.4);
+            text-decoration: none;
+            font-size: 18px;
+            margin: 5px;
+        }
+      .btn:hover {
+            background: linear-gradient(45deg, #FF9800, #FF7200);
+            transform: scale(1.08);
+            box-shadow: 0px 6px 15px rgba(255, 115, 0, 0.5);
+        }
 
- .character {
+.character {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 80px; 
 }
-    .character img {
+
+  .character img {
       width: 300px;
       height: 300px;
       object-fit: contain;
@@ -53,21 +58,23 @@ body {
     }
 
 .ads-container {
-    position: relative;
-    width: 90%; 
-    max-width: 800px; 
-    background: rgba(0, 115, 207, 0.9);
-    padding: 20px;
+ 
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto; /* 중앙 정렬 및 위쪽 여백 */
+    background: linear-gradient(135deg, #f0f8ff);
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
-    border-radius: 10px; 
-    margin: 50px auto; 
+    border-radius: 10px;
+    color: black;
 }
+    
 
 .ads-container .btn {
-    background: linear-gradient(45deg, #FFC107, #FFA000); 
-    color: #333;
+    background: linear-gradient(45deg, #0073CF, #FF7210); 
+    color:  #FFFFF0 ;
     font-weight: bold;
     padding: 12px 30px;
     border-radius: 10px;
@@ -81,27 +88,26 @@ body {
 }
 
 
-.ads-title {
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 15px;
-    text-transform: uppercase; 
-    letter-spacing: 1px;
-}
+    .ads-title {
+       font-size: 24px;
+       font-weight: bold;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       margin-bottom: 15px;
+        }
 
-.ads-desc {
-    font-size: 16px;
-    color: white;
-    margin-bottom: 20px;
-    opacity: 0.85;
-    font-style: italic; 
-}
+
+        .ads-desc {
+            font-size: 16px;
+            opacity: 0.85;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
   </style>
 </head>
 <body>
 
-  <h1>어서와!</h1>
+  <h1>어서 와! 여긴 처음이지?</h1>
   <a href="signup.html" class="btn">회원가입</a>
   <a href="about.html" class="btn">자기소개</a>
 
@@ -110,13 +116,13 @@ body {
     <p>귀여운 몰랑이가 여러분을 기다리고 있답니다!</p>
 </div>
 
-<div class="ads-container">
-    <p class="ads-title">학교와 회사 홍보</p>
-    <a href="https://futureplus.hansung.ac.kr/ko/department/future" class="btn">한성대학교 미래인재학부</a>
-    <p class="ads-desc">미래를 위한 혁신적인 교육을 제공하는 대학입니다.</p>
-    <a href="https://www.kpmtech.co.kr/kr/index.php" class="btn">케이피엠테크</a>
-    <p class="ads-desc">첨단 표면처리 기술을 선도하는 회사입니다.</p>
-</div>
-  
+    <div class="ads-container">
+        <p class="ads-title">광고</p>
+        <a href="https://futureplus.hansung.ac.kr/ko/department/future" class="btn">한성대학교 미래인재학부</a>
+        <p class="ads-desc">미래를 위한 혁신적인 교육을 제공하는 대학교입니다.</p>
+        <a href="https://www.kpmtech.co.kr/kr/index.php" class="btn">케이피엠테크</a>
+        <p class="ads-desc">첨단 표면처리 기술을 선도하는 회사입니다.</p>
+    </div>
+
 </body>
 </html>
