@@ -38,7 +38,7 @@ body {
 
 .character {
     margin-top: 50px;
-    margin-bottom: 80px; 
+    margin-bottom: 30px; 
 }
 
   .character img {
@@ -103,26 +103,161 @@ body {
             font-style: italic;
             margin-bottom: 20px;
         }
+
+.login-container {
+  width: 100%;
+  max-width: 320px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.login-container label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 18px;
+  background-color: #0073CF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-container button:hover {
+  background-color: #005bb5;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.signup-link a {
+  color: #FFFFF0;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.login-box {
+  width: 280px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0073cf;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #005bb5;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 40px; /* 박스 사이 간격 */
+}
+
+.login-container,
+.ads-container {
+  width: 45%;      
+  min-width: 300px; 
+  box-sizing: border-box; 
+}
+
+
   </style>
 </head>
 <body>
 
   <h1>어서 와! 여긴 처음이지?</h1>
-  <a href="signup.html" class="btn">회원가입</a>
-  <a href="about.html" class="btn">자기소개</a>
 
-  <div class="character">
+    <div class="character">
     <img src="molang_main.jpg" alt="몰랑이 캐릭터" />
-    <p>귀여운 몰랑이가 여러분을 기다리고 있답니다!</p>
+    <p>귀여운 몰랑이가 여러분을 기다리고 있었답니다!</p>
 </div>
+<a href="about.html" class="btn">자기소개 보러가기!</a>
 
-    <div class="ads-container">
-        <p class="ads-title">광고</p>
-        <a href="https://futureplus.hansung.ac.kr/ko/department/future" class="btn">한성대학교 미래인재학부</a>
-        <p class="ads-desc">미래를 위한 혁신적인 교육을 제공하는 대학교입니다.</p>
-        <a href="https://www.kpmtech.co.kr/kr/index.php" class="btn">케이피엠테크</a>
-        <p class="ads-desc">첨단 표면처리 기술을 선도하는 회사입니다.</p>
-    </div>
+<div class="container">
+  <div class="login-container">
+    <h2>로그인</h2>
+    <form action="login.html" method="post">
+      <label for="username">아이디</label>
+      <input type="text" id="username" name="username" placeholder="아이디 입력" required>
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" name="password" placeholder="비밀번호 입력" required>
+      <button type="submit">로그인</button>
+    </form>
+    <p class="signup-link">가입을 하고 싶다면<a href="signup.html" class="btn">회원가입</a></p>
+  </div>
+
+  <div class="ads-container">
+    <p class="ads-title">광고</p>
+    <a href="https://futureplus.hansung.ac.kr/ko/department/future" class="btn">한성대학교 미래인재학부</a>
+    <p class="ads-desc">미래를 위한 혁신적인 교육을 제공하는 대학교입니다.</p>
+    <a href="https://www.kpmtech.co.kr/kr/index.php" class="btn">케이피엠테크</a>
+    <p class="ads-desc">첨단 표면처리 기술을 선도하는 회사입니다.</p>
+  </div>
+</div>
 
 </body>
 </html>
