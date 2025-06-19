@@ -29,6 +29,29 @@
 
     alert(text);
   }
+
+ function calculateAge() {
+    const birthInput = document.getElementById('birth').value;
+    const ageSpan = document.getElementById('ageDisplay');
+
+    if (birthInput) {
+      const birthDate = new Date(birthInput);
+      const today = new Date();
+
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      const dayDiff = today.getDate() - birthDate.getDate();
+
+      if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+      }
+
+      ageSpan.textContent = `나이: ${age}세`;
+    } else {
+      ageSpan.textContent = '';
+    }
+  }
+  
 </script>
     <style> 
 
@@ -181,8 +204,10 @@ input[type="submit"]:hover {
     <label for="email">이메일:</label><br>
     <input type="email" id="email" name="email"><br><br>
 
-    <label for="birth">생년월일:</label><br>
-    <input type="date" id="birth" name="birth"><br><br>
+ <label for="birth">생년월일:</label><br>
+ <input type="date" id="birth" name="birth" onchange="calculateAge()">
+ <span id="ageDisplay" style="margin-left: 10px; font-weight: bold;"></span>
+ <br><br>
 
     <label for="gender">성별:</label><br>
     <select id="gender" name="gender">
